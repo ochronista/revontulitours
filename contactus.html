@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Introduction - Bootstrap <a href:"https://getbootstrap.com/docs/5.3/getting-started/introduction/"</a>-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact and Bookings - RevontuliTours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+   
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #101935;" data-bs-theme="dark">
+    <!--Navbar - Bootstrap: <a href:"https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works"</a>-->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/ag_icon_color.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Revontuli<b>Tours</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!--Call to Action-->
+      <section class="text-center mt-5 py-5" style="background-color: #564787; color: #f2fdff;">
+        <div class="container">
+          <h2 class="fw-bold">Let's have a chat!</h2>
+          <p class="lead">Please fill up the form in order to quote your adventure with our sales team.<br>We will answer you in 24 business hours.</p>
+          <p>If you have any specific request, such as dietary needs, or groups larger than 8 people, please write in the message box.</p>
+        </div>
+       
+  </section>
+
+<!--Forms - Bootstrap: <a href=https://getbootstrap.com/docs/5.3/forms/overview/</a>-->
+<form id="contactForm" action="/" method="GET" class="row g-3 mx-auto my-5" style="max-width: 600px;">
+
+  <label for="name" class="form-label">Full Name</label>
+  <input type="text" class="form-control" id="name" placeholder="Name" required>
+  <span class="text-danger" id="nameError"></span>
+
+  <label for="email" class="form-label">Email</label>
+  <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+  <span class="text-danger" id="emailError"></span>
+
+<div class="col-12 mb-3">
+  <label for="phone" class="form-label">Phone</label> 
+    <input type="tel" id="phone" class="form-control">
+  <span class="text-danger" id="phoneError"></span>
+</div>
+
+<label for="queryType" class="form-label">Query type</label>
+<select class="form-select" id="queryType" required>
+  <option value="" selected disabled>Choose an option</option>
+  <option value="booking">Booking</option>
+  <option value="payment">Payment</option>
+  <option value="refund">Refund</option>
+  <option value="others">Other</option>
+</select>
+<span class="text-danger" id="queryTypeError"></span>
+
+<div id="tourSelectionContainer" class="d-none">
+  <label for="tourType" class="form-control-label mt-3">Select your Tour</label>
+  <select class="form-select" id="tourType">
+    <option value="" selected disabled>Choose a tour...</option>
+    <option value="aurora">Aurora Spotting</option>
+    <option value="reindeer">Reindeer Farm</option>
+    <option value="riisitunturi">Riisitunturi National Park</option>
+    <option value="santa">Santa Claus Private Visit</option>
+    <option value="korouoma">Korouoma Canyon</option>
+    <option value="snowmobile">Snowmobile Ride</option>
+    <option value="sampo">Sampo Icebreaker</option>
+    <option value="husky">Husky Farm</option>
+    <option value="fishing">Ice Fishing</option>
+    <option value="village">Santa Claus Village Tour</option>
+    <option value="snowshoe">Snowshoeing</option>
+    <option value="ranua">Ranua Wildlife Park</option>
+    <option value="other">Other</option>
+  </select>
+  <span class="text-danger" id="tourTypeError"></span>
+
+  <label for="travelerCountField" class="form-label mt-3">Number of Passengers</label>
+  <input type="number" class="form-control" id="travelerCountField" name="pax" min="1" max="8">
+  <small class="text-muted">Maximum 8 people per group. If you want to book for a bigger group, please write the details in the message below.</small>
+</div>
+
+  <label for="textarea" class="form-label">Message</label>
+  <textarea class="form-control" id="textarea" rows="4" minlength="10" required></textarea>
+  <small class="text-muted">When booking a tour, please write the dates you are available to go.<br> We will discuss about all the relevant information through the email, such as tour dates, payment, policies and request forms.</small>
+  <span class="text-danger" id="textareaError"></span>
+
+<input class="btn btn-outline-success" type="submit" value="Send Message">
+
+</form>
+
+<section class="container my-5"></section>
+
+<!--Footer tag - MDBootstrap: <a href:"https://mdbootstrap.com/snippets/standard/mdbootstrap/2885092?view=side"</a>-->
+  <footer style="background-color: #564787;">
+  <div class="container p-4">
+    <div class="row text-center text-lg-start align-items-start"> 
+      <div class="col-lg-4 col-md-6 mb-4 text-center">
+        <img src="images/s01_santa.jpg" class="rounded-circle mb-3" style="width: 140px; height: 140px; object-fit: cover;" alt="Santa Approved">
+        <p style="color: #f2fdff; font-size: 0.9rem;">This company is approved by<br>Santa Claus</p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 text-center">
+        <h5 style="letter-spacing: 2px; color: #dbcbd8;">Revontuli<b>Tours</b></h5>
+        <p style="color: #f2fdff">
+          contact@revontulitours.fi<br>
+          +358 41 725 9979<br>
+          Eteläranta 11C<br>
+          96300 Rovaniemi<br>
+          Finland
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4 text-center">
+        <h5 style="letter-spacing: 2px; color: #dbcbd8;">Menu</h5>
+          <ul class="list-unstyled mb-3">
+            <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+            <li><a href="catalog.html" class="text-light text-decoration-none">Catalog</a></li>
+            <li><a href="contactus.html" class="text-light text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+
+      <div class="col-lg-2 col-md-6 mb-4 text-center d-flex flex-column align-items-center">
+        <h5 class="mb-2" style="letter-spacing: 2px; color: #dbcbd8;">Find us at</h5>
+          
+          <div class="social-icons d-flex gap-3 mt-3 justify-content-center align-items-center">
+            <a href="https://www.facebook.com/valv27" class="text-white">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="mailto:ochronista@gmail.com" class="text-white">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            <a href="https://linkedin.com/in/valves27" class="text-white">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/ochronista" class="text-white">
+              <i class="bi bi-github"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-3" style="background-color: #101935; color:#f2fdff">
+    © 2026 Vítor Alves | x25234897
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"></script>
+<script src="js/functions.js"></script>
+
+</body>
+</html>

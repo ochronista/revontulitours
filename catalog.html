@@ -1,0 +1,623 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <!--Introduction - Bootstrap <a href:"https://getbootstrap.com/docs/5.3/getting-started/introduction/"</a>-->
+    <head>
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tour Catalog - RevontuliTours</title>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+          <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    
+    <body>   
+
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #101935;" data-bs-theme="dark">
+    <!--Navbar - Bootstrap: <a href:"https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works"</a>-->
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="images/ag_icon_color.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                Revontuli<b>Tours</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Catalog</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+  <section class="hero-image position-relative d-flex align-items-center" style="background-image: url('images/h06_family.jpg'); background-size: cover; background-position: center; height: 100vh;">
+  <!--<a href: https://www.pexels.com/pt-br/foto/frio-com-frio-neve-casal-6618008/"</a> Photo by Yan Krukau on Pexels.-->
+  <div class="container">
+    <div class="col-md-8 mx-auto text-center">
+      <div class="p-4 p-md-5 bg-dark bg-opacity-75 rounded">
+        <h3 class="display-3 fw-bold text-white">Catalog</h3>
+        <h4 class="fw-normal text-light mb-4">Select our tours by type.</h4><br>
+        <div class="text-center mb-4">
+        <button class="btn btn-outline-light filter-btn" data-category="all">All</button>
+        <button class="btn btn-outline-light filter-btn" data-category="adventure">Adventure</button>
+        <button class="btn btn-outline-light filter-btn" data-category="family">Family</button>
+        <button class="btn btn-outline-light filter-btn" data-category="xmas">Christmas</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mx-auto my-4">
+
+      <!--Card - Bootstrap: <a href:"https://getbootstrap.com/docs/5.3/components/card/"</a>-->
+      <div class="col product adventure">
+        <div class="card h-100">
+          <img src="images/c01_aurora.jpg" class="card-img-top" alt="Northern Lights">
+          <!--image attributed to: <a href="https://www.pexels.com/pt-br/foto/aurora-lights-1693095/">Image by Tobias Bjørkli on Pexels</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Aurora Spotting</h5>
+          <p class="card-text">Enjoy the lights show in the sky. Refunds may apply*.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#auroraModal">More Info</button>
+        </div>
+        </div>
+      </div>
+
+      <div class="col product family">
+      <div class="card h-100">
+        <img src="images/c02_reindeer_farm.jpg" class="card-img-top" alt="Reindeer">
+        <!--image attributed to: <a href="https://www.pexels.com/pt-br/foto/frio-com-frio-neve-pessoa-5389946/">Image by Barry Tan on Pexels.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Reindeer Farm</h5>
+          <p class="card-text">Get to know Santa's best helpers, tended to by a traditional Sámi herder.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#reindeerModal">More Info</button>
+        </div>
+        </div>
+      </div>
+
+       <div class="col product adventure">
+        <div class="card h-100">
+        <img src="images/c03_riisitunturi.jpg" class="card-img-top" alt="Riisitunturi">
+        <!--image attributed to: <a href="https://www.pexels.com/pt-br/foto/28359749/">Image by Sergey Guk on pexels.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Riisitunturi National Park</h5>
+          <p class="card-text">Hike through the frozen tundra and snowcapped pine trees.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#riisitunturiModal">More Info</button>
+        </div>
+      </div>
+      </div>
+      
+      <div class="col product xmas family">
+        <div class="card h-100">
+        <img src="images/c04_santa.jpg" class="card-img-top" alt="Hiking Boots">
+        <!--Personal archive. Image attributed to Vítor Alves.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Santa Claus Private Tour</h5>
+          <p class="card-text">Santa and an assistant elf will visit your place and enchant your family</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#santaModal">More Info</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="col product adventure">
+        <div class="card h-100">
+        <img src="images/c05_korouoma.jpg" class="card-img-top" alt="Korouoma">
+        <!--image attributed to: <a href="https://www.luontoon.fi/en/destinations/korouoma">Image by Jonna Kalliomäki on luontoon.fi.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Korouoma Canyon</h5>
+          <p class="card-text">Hike through a gorge-ous canyon and frozen waterfalls.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#korouomaModal">More Info</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="col product adventure">
+        <div class="card h-100">
+        <img src="images/c06_snowmobile.jpg" class="card-img-top" alt="Snowmobile">
+
+        <!--image attributed to: <a href="https://www.freepik.com/free-photo/snowy-day-with-people-riding-snowmobiles-mountain-distance-north-sweden_10120019.htm#fromView=search&page=2&position=6&uuid=a8809a79-437c-40d8-91e2-d4643cc037e7&query=sami">Image by wirestock on freepik.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Snowmobile Ride</h5>
+          <p class="card-text">Go on an adventurous ride with safety and speed.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#snowmobileModal">More Info</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="col product adventure">
+        <div class="card h-100">
+        <img src="images/c07_sampo.jpg" class="card-img-top" alt="Sampo Icebreaker">
+        <!--image attributed to: <a href="https://www.pexels.com/pt-br/foto/quebra-gelo-sampo-em-aguas-congeladas-da-laponia-30148726/">Image by Markku Soini on Pexels.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Sampo Icebreaker</h5>
+          <p class="card-text">Embark on one of the most unique sea travels of your life.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#sampoModal">More Info</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="col product family">
+        <div class="card h-100">
+        <img src="images/c08_husky.jpg" class="card-img-top" alt="Husky Sleigh">
+        <!--image attributed to: <a href=https://www.pexels.com/pt-br/foto/cachorros-amarrados-no-campo-de-neve-1499215/">Image by chepté cormani on Pexels</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Husky Farm</h5>
+          <p class="card-text">Human's best and loveliest friends, even in tough Arctic conditions.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#huskyModal">More Info</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="col product adventure">
+        <div class="card h-100">
+        <img src="images/c09_ice_fishing.jpg" class="card-img-top" alt="Ice Fishing">
+        <!--image attributed to: <a href="https://www.pexels.com/pt-br/foto/frio-com-frio-neve-pescaria-6830984/">Image by Tima Miroshnichenko on Pexels.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Ice Fishing</h5>
+          <p class="card-text">Discover the concept of <i>rauha</i> while fishing in a frozen lake.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#fishingModal">More Info</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="col product family xmas">
+        <div class="card h-100">
+        <img src="images/c10_village.jpg" class="card-img-top" alt="Village">
+        <!--image attributed to: <a href="https://commons.wikimedia.org/wiki/File:Arctic_circle_santa_village.jpg">Image by Romano Ando on Wikimedia Commons.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Santa Claus Village Tour</h5>
+          <p class="card-text">Visit the official workplace of Santa Claus on the Arctic Circle.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#villageModal">More Info</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="col product adventure">
+        <div class="card h-100">
+        <img src="images/c11_snowshoe.jpg" class="card-img-top" alt="Snowshoeing">
+        <!--image attributed to: <a href="https://www.freepik.com/free-photo/skier-couple-walking-snow-covered-mountain_10748781.htm#fromView=keyword&page=1&position=0&uuid=601a7d5c-1d55-4f65-aeb7-6b16a6012daf&query=Walking+snow">Image by wavebreakmedia_micro on Freepik.</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Snowshoeing</h5>
+          <p class="card-text">Learn a technique used for millenia by the locals to stroll through thick snow.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#snowshoeModal">More Info</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="col product family">
+        <div class="card h-100">
+        <img src="images/c12_ranua.jpg" class="card-img-top" alt="Ranua">
+        <!--image attributed to: <a href="https://www.visitrovaniemi.fi/wp-content/uploads/3e977160-4e08-11ec-a95c-cfaccc6e09a0-20200429-_T4A9996-1280x853.jpg">Image by visitrovaniemi.fi</a>-->
+        <div class="card-body d-flex flex-column text-center">
+          <h5 class="card-title">Ranua Wildlife Park</h5>
+          <p class="card-text">Enjoy the various animals at the Northernmost Zoo in the world.</p>
+          <button type="button" class="btn btn-outline-secondary mt-auto" data-bs-toggle="modal" data-bs-target="#ranuaModal">More Info</button>
+        </div>
+      </div>
+      </div>
+      
+      </div>
+    </section>
+
+<!--Modal - Bootstrap: <a href:"https://getbootstrap.com/docs/4.0/components/modal/"</a>-->
+    <div class="modal fade" id="auroraModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Aurora Spotting</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c01_aurora.jpg" class="img-fluid" alt="Aurora"></div>
+            <p>5h tour through Lapland to enjoy the Northern Lights, creating a memento for life.</p>
+            <p class="text-muted">Includes: hotel pickup, professional guide, hot drinks and snacks.</p>
+            <p>Tour available between September and March.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAurora">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseAurora">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €250/person</p>
+              <p class="text-muted">*Due to operational costs, in case of a night without auroras, we can reimburse up to 50% of the tour price. Please email us at contact@revontulitours.fi.</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=aurora&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="reindeerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Reindeer Farm</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c02_reindeer_farm.jpg" class="img-fluid" alt="Reindeer"></div>
+            <p>3h tour through a reindeer farm, with an exhibition presented by traditional Sámi reindeer herders.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer (30 minutes drive to the farm), professional guide, 15-minutes sleigh ride and feeding/petting session.</p>
+            <p>Tour available between October and March.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReindeer">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseReindeer">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €100/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=reindeer&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="riisitunturiModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Riisitunturi National Park</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c03_riisitunturi.jpg" class="img-fluid" alt="Riisitunturi"></div>
+            <p>Day tour to Riisitunturi National Park, where you will hike on a 3mi/5km trail and take stunning pictures with the snowcapped trees.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer to Posio (2h drive from Rovaniemi), professional guide, hot beverages and snacks, snowshoes, and professional photos delivered in 48 business hours.</p>
+            <p>Tour available between October and April.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRiisitunturi">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseRiisitunturi">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €180/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=riisitunturi&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="santaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Santa Claus Private Visit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c04_santa_alt.jpg" class="img-fluid" alt="Santa"></div>
+            <p>Santa Claus is very busy throughout the year, but since you and your family made the effort to come to Lapland, he (and his assistant Elf) can pay you a very special visit.</p>
+            <p class="text-muted">Includes: 30 minutes meet-up at your private stay, photos, and gift sharing*.</p>
+            <p>Tour available upon request.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSanta">Select number of people on this activity</button>
+            <div class="collapse mb-3" id="collapseSanta">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €100/person</p>
+              <p class="text-muted">*Once upon requesting the service, we will send a manual through the booking email, in order to get the necessary information from the family.</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=santa&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="korouomaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Korouoma Canyon</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c05_korouoma.jpg" class="img-fluid" alt="Korouoma"></div>
+            <p>Day tour to Korouoma Canyon, where you will hike on a 3mi/5km trail and enjoy the beautiful taiga landscape and the frozen waterfalls.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer to Posio (2h drive from Rovaniemi), professional guide, hot beverages and snacks, shoe spikes, and professional photos delivered in 48 business hours.</p>
+            <p>Tour available between October and April.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKorouoma">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseKorouoma">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €100/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=korouoma&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="snowmobileModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Snowmobile Ride</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c06_snowmobile.jpg" class="img-fluid" alt="Snowmobile"></div>
+            <p>4h snowmobile tour on a private property, where you'll be able to learn and enjoy this winter pasttime*.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer to the property (30 minutes drive from Rovaniemi), professional guide, beginner safety and riding course.</p>
+            <p>Tour available between October and March.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSnowmobile">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseSnowmobile">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €120/person</p>
+              <p class="text-muted">*You will need to show a valid driver's license (B Category) in order to book this tour.</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=snowmobile&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="sampoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Sampo Icebreaker</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c07_sampo.jpg" class="img-fluid" alt="Sampo"></div>
+            <p>Day tour through Sampo Icebreaker, a historical ship that connected Lapland to the world.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer to Kemi (2h drive from Rovaniemi), professional guide, ice floating, passenger certificate, and lunch buffet (vegan-friendly).</p>
+            <p>Tour available between December and April.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSampo">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseSampo">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €250/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=sampo&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="huskyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Husky Farm</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c08_husky.jpg" class="img-fluid" alt="Husky"></div>
+            <p>3h tour through a husky farm, with lots of fun for the family.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer (30 minutes drive to the farm), professional guide, 15-minutes sleigh ride and petting session.</p>
+            <p>Tour available between October and March.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHusky">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseHusky">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €85/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=husky&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="fishingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Ice Fishing</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c09_ice_fishing.jpg" class="img-fluid" alt="Fishing"></div>
+            <p>4h tour to a frozen lake on a private property, where you will be enjoying the Arctic nature while attempting to get your dinner.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer (30 minutes drive to the farm), professional guide, 15-minutes sleigh ride and petting session.</p>
+            <p>Tour available between November and March.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFishing">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseFishing">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €100/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=fishing&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="villageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Santa Claus Village Tour</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c10_village.jpg" class="img-fluid" alt="Village"></div>
+            <p>4h tour through the Santa Claus Village Complex, where you will be able to meet and greet Santa Claus, cross the Arctic Circle and enjoy shopping local brands.</p>
+            <p class="text-muted">Includes: hotel pickup, Santa Claus pictures, Arctic Circle Crossing Certificate.</p>
+            <p>Tour available all year round.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVillage">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseVillage">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €80/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=village&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="snowshoeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Snowshoeing</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c11_snowshoe.jpg" class="img-fluid" alt="Snowshoeing"></div>
+            <p>4h tour to a private property, where you will learn the basics of snowshoeing on a 2mi/3km hike.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer to the property (30 minutes drive from Rovaniemi), professional guide, snowshoes, and hot beverages and snacks on a warm <i>kota</i>.</p>
+            <p>Tour available between October and March.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSnowshoe">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseSnowshoe">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €100/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=snowshoe&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ranuaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content text-center">
+        <div class="modal-header justify-content-center">
+          <h5 class="modal-title w-100">Ranua Wildlife Park</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-4x3 mb-3"><img src="images/c12_ranua.jpg" class="img-fluid" alt="Ranua"></div>
+            <p>Day tour to Ranua Wildlife Park, the Northernmost Zoo in the world, to learn more about the Arctic fauna and flora.</p>
+            <p class="text-muted">Includes: hotel pickup and transfer (1.5h to Posio), professional guide, tickets to the Park.</p>
+            <p>Tour available all year round.</p>
+              <button class="btn btn-outline-dark mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRanua">Select number of people on this tour</button>
+            <div class="collapse mb-3" id="collapseRanua">
+            <div class="card card-body bg-light mx-auto" style="max-width: 200px;">
+              <input type="number" class="form-control text-center pax-input" value="1" min="1" max="8">
+            </div>
+            </div>
+              <p class="fw-bold">Price: €150/person</p>
+        </div>
+            <div class="modal-footer justify-content-center">
+              <a href="contactus.html?tour=ranua&pax=1" class="btn btn-outline-dark book-btn">Book Now</a>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Call to Action-->
+      <div class="bg-dark text-white text-center py-5">
+        <div class="container">
+          <h2 class="fw-bold">Want to book a different tour?</h2>
+          <p class="lead">Let's arrange it together.</p>
+          <a href="contactus.html?tour=other" class="btn btn-outline-light btn-lg">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    </main>
+
+<!--Footer tag - MDBootstrap: <a href:"https://mdbootstrap.com/snippets/standard/mdbootstrap/2885092?view=side"</a>-->
+  <footer style="background-color: #564787;">
+  <div class="container p-4">
+    <div class="row text-center text-lg-start align-items-start"> 
+      <div class="col-lg-4 col-md-6 mb-4 text-center">
+        <img src="images/s01_santa.jpg" class="rounded-circle mb-3" style="width: 140px; height: 140px; object-fit: cover;" alt="Santa Approved">
+        <p style="color: #f2fdff; font-size: 0.9rem;">This company is approved by<br>Santa Claus</p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 text-center">
+        <h5 style="letter-spacing: 2px; color: #dbcbd8;">Revontuli<b>Tours</b></h5>
+        <p style="color: #f2fdff">
+          contact@revontulitours.fi<br>
+          +358 41 725 9979<br>
+          Eteläranta 11C<br>
+          96300 Rovaniemi<br>
+          Finland
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4 text-center">
+        <h5 style="letter-spacing: 2px; color: #dbcbd8;">Menu</h5>
+          <ul class="list-unstyled mb-3">
+            <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+            <li><a href="catalog.html" class="text-light text-decoration-none">Catalog</a></li>
+            <li><a href="contactus.html" class="text-light text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+
+      <div class="col-lg-2 col-md-6 mb-4 text-center d-flex flex-column align-items-center">
+        <h5 class="mb-2" style="letter-spacing: 2px; color: #dbcbd8;">Find us at</h5>
+          
+          <div class="social-icons d-flex gap-3 mt-3 justify-content-center align-items-center">
+            <a href="https://www.facebook.com/valv27" class="text-white">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="mailto:ochronista@gmail.com" class="text-white">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+            <a href="https://linkedin.com/in/valves27" class="text-white">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/ochronista" class="text-white">
+              <i class="bi bi-github"></i>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-3" style="background-color: #101935; color:#f2fdff">
+    © 2026 Vítor Alves | x25234897
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/functions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* body */
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #f2fdff;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        padding-top: 70px;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+/* navbar */
+    .navbar {
+        width: 100%;
+        border-radius: 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        background-color: rgba(16, 25, 53, 0.9);
+    }
+
+/* hero with video for index.html */
+    .video-hero {
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .video-hero video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+
+    .video-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        z-index: 1;
+    }
+
+    .hero-content {
+        z-index: 2;
+    }
+
+/* filter buttons on catalog.html*/
+
+    .filter-btn.active {
+        background-color: white;
+        color: #101935;
+        border-color: white;
+    }
+    
+/* hover cards on the other pages*/
+    .card{
+        transition: transform 0.3s;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-body {
+        flex-grow: 1;
+    }
+
+    .card:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+/* number of passengers button in catalog.html */
+    .pax-input {
+        border: 2px solid #564787;
+        font-weight: bold;
+        color: #564787;
+        border-radius: 8px;
+    }
+
+    .card-body.bg-light {
+        border: none;
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+/* footer */
+    footer {
+        text-align: center;
+        background-color: #101935;
+        color: #f2fdff;
+    }
+
+    footer h5 {
+        margin-bottom: 15px;
+    }
+
+    footer a:hover {
+        color: #dda15e;
+    }
+
+    .social-icons i {
+        font-size: 26px;
+        transition: all 0.25s ease;
+    }
+
+    .social-icons a:hover i {
+        transform: translateY(-3px);
+        opacity: 0.8;
+    }
+
+
+/* country code input in contactus.html */
+    .iti {
+        width: 100%;
+    }
+
+    .iti input.form-control {
+        width: 100%;
+        padding-left: 60px;
+    }
+
+    .iti__flag-container {
+        display: flex;
+        align-items: center;
+        padding-left: 8px;
+    }
+
